@@ -20,7 +20,7 @@ from pandasai import Agent
 
 # GUI
 st.title("Talk to Enterprise Meta Data")
-st.write("What's up!")
+st.write("Hi, I am a chatbot that can understand human language and provide insights of Enterprise meta data!")
 st.session_state.prompt_history = []
 
 with st.form("Question"):
@@ -51,3 +51,4 @@ with st.form("Question"):
                 st.write(response)
 
             st.session_state.prompt_history.append(question)
+
