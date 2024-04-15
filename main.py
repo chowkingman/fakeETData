@@ -29,16 +29,6 @@ with st.form("Question"):
     if submitted:
         with st.spinner():
             llm = OpenAI()
-            # pandas_ai = PandasAI(llm)
-            # x = pandas_ai.run(st.session_state.df, prompt=question)
-
-            # if os.path.isfile('temp_chart.png'):
-            #     im = plt.imread('temp_chart.png')
-            #     st.image(im)
-            #     os.remove('temp_chart.png')
-
-            # if x is not None:
-            #     st.write(x)
 
             sdf1 = SmartDataframe('MOCK_APP_DATA.csv', config={"llm": llm})
             sdf2 = SmartDataframe('MOCK_RESOURCE_DATA.csv', config={"llm": llm})
@@ -48,9 +38,10 @@ with st.form("Question"):
                 config={"llm": llm},
                 description=
                 "You have two tables, the MOCK_APP_DATA has the basic descriptive information of all the applications, " +
-                "and each application has an ID in the column id. " + 
-                "The MOCK_RESOURCE_DATA indicated the resources each app use, each resource has an app_id which is the same id as the MOCK_APP_DATA table." +
-                "Using the two tables, you can tell the descriptive information of the application and the resources being used by each app. " +
+                "and each application has an ID in the column id which is an unique identifier of each application. " + 
+                "The MOCK_RESOURCE_DATA table indicated the resources each application use. Each application can have multiple resources, and each resource has an app_id indicated which application the resource(s) belongs to." +
+                "Using the two tables, you can identify the descriptive information of each application, such as the owner of the application, the email address of the owner, " + 
+                "the organization the app belongs to, and the resources being used by each app and the online status of the application. " +
                 "Your job is to provide insights to the non-techincal users about the application information."
             )
 
