@@ -1,4 +1,4 @@
-app_id,app_name,app_owner,app_owner_email,app_org,online_now
+id,name,owner,owner_email,organization,online_status
 135,Transderm Scop,Normie Kryszkiecicz,nkryszkiecicz0@samsung.com,Fabaceae,true
 145,Healthy Accents hemorrhoidal,Hadley Roake,hroake1@squidoo.com,Pottiaceae,true
 116,HYDROCODONE BITARTRATE AND ACETAMINOPHEN,Arlin Bogie,abogie2@seattletimes.com,Fabaceae,true
